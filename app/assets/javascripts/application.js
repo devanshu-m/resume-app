@@ -17,3 +17,11 @@
 //= require trix
 //= require jquery
 //= require bootstrap-sprockets
+
+addEventListener("click", function(event) {
+  var el = event.target
+
+  if (el.tagName === "A" && !el.isContentEditable && el.host !== window.location.host) {
+    el.setAttribute("target", "_blank")
+  }
+}, true)
