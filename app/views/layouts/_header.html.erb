@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <nav class="navbar navbar-default" role="navigation">
   <!-- We use the fluid option here to avoid overriding the fixed width of a normal container within the narrow content columns. -->
   <div class="container-fluid">
@@ -18,6 +20,27 @@
         <li><%= link_to 'Sample Work', sample_work_path %></li>
         <li><%= link_to 'Projects and Publications', projects_path %></li>
         <li><%= link_to 'About me', about_me_path %></li>
+
+        <li>
+          <%= link_to 'https://twitter.com/devanshu19', target: "_blank" do %>
+            <i class="fa fa-twitter"></i>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to 'https://www.facebook.com/devanshu.matlawala', target: "_blank" do %>
+            <i class="fa fa-facebook"></i>
+          <% end %>
+        </li>
+        <li> 
+          <%= link_to 'https://www.linkedin.com/in/devanshumatlawala/', target: "_blank" do %>
+            <i class="fa fa-linkedin"></i>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to 'https://github.com/devanshu-m', target: "_blank" do %>
+            <i class="fa fa-github" aria-hidden="true"></i>
+          <% end %>
+        </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
