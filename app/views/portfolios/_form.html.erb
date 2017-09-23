@@ -1,0 +1,104 @@
+<%= form_for @info do |p| %>
+
+  <% if @info.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@post.errors.count, "error") %> prohibited
+        this post from being saved:
+      </h2>
+      <ul>
+        <% @post.errors.full_messages.each do |m| %>
+          <li><%= m %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="modal-dialog modal-lg" style="width: 90%">
+  <div class="modal-content">
+    <div class="modal-header">
+        <h4 class="modal-title">
+          <div class="modal-body">
+          	<p>
+				      <%= p.label "Summary" %><br>
+				      <%= p.trix_editor :summary %>
+			      </p>
+
+			      <p>
+				      <%= p.label "Experience" %><br>
+				      <%= p.trix_editor :exp %>
+			      </p>
+
+            <p>
+              <%= p.label "Publications" %><br>
+              <%= p.trix_editor :selected_publications %>
+            </p>
+            <p>
+              <%= p.label "Education" %><br>
+              <%= p.trix_editor :education %>
+            </p>
+            <p>
+              <%= p.label "Sample Work" %><br>
+              <%= p.trix_editor :sample_work %>
+            </p>
+            <p>
+              <%= p.label "Projects" %><br>
+              <%= p.trix_editor :projects %>
+            </p>
+            <p>
+              <%= p.label "Hobbies" %><br>
+              <%= p.trix_editor :hobbies %>
+            </p>
+            <p>
+              <%= p.label "Locations" %><br>
+              <%= p.trix_editor :locations %>
+            </p>
+            <p>
+              <%= p.label "Dates" %><br>
+              <%= p.trix_editor :dates %>
+            </p>
+            <p>
+              <%= p.label "Core compentencies" %><br>
+              <%= p.trix_editor :core %>
+            </p>
+            <p>
+              <%= p.label "Companies" %><br>
+              <%= p.trix_editor :comapny %>
+            </p>
+            <p>
+              <%= p.label "Position" %><br>
+              <%= p.trix_editor :position %>
+            </p>
+            <p>
+              <%= p.label "Skills" %><br>
+              <%= p.trix_editor :skills %>
+            </p>
+            
+			      <p>
+				      <%= p.submit "Submit new post" %>
+			      </p>
+          </div>
+        </h4>
+    </div>
+  </div>
+</div>
+<% end %>
+
+<!--
+
+t.text     "summary"
+    t.text     "exp"
+    t.text     "selected_publications"
+    t.text     "education"
+    t.text     "sample_work"
+    t.text     "projects"
+    t.text     "hobbies"
+    t.text     "locations"
+    t.text     "dates"
+    t.text     "core"
+    t.text     "comapny"
+    t.text     "position"
+    t.text     "skills"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+  -->

@@ -1,0 +1,39 @@
+<section class="site-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+      	<div class="modal-dialog modal-lg">
+<% flash.each do |name, msg| %>
+            <%= content_tag :div, msg, class: "alert alert-info" %>
+<% end %>
+<%if @projects.present? %>
+<div class="modal-dialog modal-lg">
+	<div class="modal-content">
+    	<div class="modal-header">
+        	<h4 class="modal-title">
+          		<div class="modal-body">
+					<div class="trix-content"><%= @projects.html_safe %></div>
+		  		</div>
+			</h4>
+		</div>
+ 	</div>
+</div>
+<%end%>
+<%if @publications.present? %>
+<div class="modal-dialog modal-lg">
+	<div class="modal-content">
+    	<div class="modal-header">
+        	<h4 class="modal-title">
+          		<div class="modal-body">
+					<div class="trix-content"><%= @publications.html_safe %></div>
+		  		</div>
+			</h4>
+		</div>
+ 	</div>
+</div>
+<%end%>
+</div>
+</div>
+</div>
+</div>
+</section>

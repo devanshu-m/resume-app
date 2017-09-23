@@ -1,0 +1,53 @@
+$color_1: #555;
+$color_2: #444;
+$color_3: #777;
+$color_4: #999;
+$font_family_1: "Helvetica Neue",Helvetica,Arial,sans-serif;
+$background_color_1: #f5f5b4;
+$background_color_2: #f5f5f5;
+
+.trix-content {
+  font-family: $font_family_1;
+  font-size: 16px;
+  line-height: 1.5;
+  padding-left: 2.5em;
+  blockquote {
+    background-color: $background_color_1;
+    color: $color_2;
+    margin-bottom: 20px;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #e1e8ed;
+  }
+  pre {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: $background_color_2;
+    border: 1px solid #f5f5f5;
+    font-size: 14px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px 0;
+    display: block;
+    position: relative;
+    margin-bottom: 15px;
+    &:before {
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-bottom: 7px solid #f5f5f5;
+      border-top: none;
+      height: 0;
+      width: 0;
+      content: "";
+      left: 20px;
+      position: absolute;
+      top: -8px;
+    }
+  }
+  span {
+    font-weight: 700;
+    left: -2em;
+    text-align: right;
+    width: 1.5em;
+  }
+}

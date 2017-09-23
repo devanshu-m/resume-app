@@ -1,0 +1,86 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-3 col-lg-2">
+      <nav class="navbar navbar-default navbar-fixed-side" style="height: 160px;">
+        <!-- normal collapsible navbar markup -->
+        <ul class="nav navbar-nav">
+   			<li><a href="#s2">Work Experience</a></li>
+   			<li><a href="#s3">Education</a></li>
+   			<li><a href="#s1">Core Competencies</a></li>
+   			<li><a href="#s4">Skills</a></li>
+   		</ul>
+      </nav>
+    </div>
+    <div class="col-sm-9 col-lg-10">
+      <!-- your page content -->
+<% flash.each do |name, msg| %>
+            <%= content_tag :div, msg, class: "alert alert-info" %>
+<% end %>
+<div class="col-md-10 bordered">
+<div class="modal-dialog modal-lg">
+	<div class="modal-content">
+    	<div class="modal-header">
+        	<h4 class="modal-title">
+          		<div class="modal-body">
+					<div id="s2" class="trix-content" align="center"><a href="https://www.dropbox.com/s/a2y2zlhpxr7ekui/Devanshu_Matlawala%28Resume%29.pdf?dl=0" target="_blank">Professional Resume (PDF)</a></div>
+		  		</div>
+			</h4>
+		</div>
+ 	</div>
+</div>
+<%if @exp.present? %>
+<div class="modal-dialog modal-lg">
+	<div class="modal-content">
+    	<div class="modal-header">
+        	<h4 class="modal-title">
+          		<div class="modal-body">
+					<div id="s2" class="trix-content"><%= @exp.html_safe %></div>
+		  		</div>
+			</h4>
+		</div>
+ 	</div>
+</div>
+<%end%>
+<%if @education.present? %>
+<div class="modal-dialog modal-lg">
+	<div class="modal-content">
+    	<div class="modal-header">
+        	<h4 class="modal-title">
+          		<div class="modal-body">
+					<div id="s3" class="trix-content"><%= @education.html_safe %></div>
+		  		</div>
+			</h4>
+		</div>
+ 	</div>
+</div>
+<%end%>
+<%if @core.present? %>
+<div class="modal-dialog modal-lg">
+	<div class="modal-content">
+    	<div class="modal-header">
+        	<h4 class="modal-title">
+          		<div class="modal-body">
+					<div id="s1" class="trix-content"><%= @core.html_safe %></div>
+		  		</div>
+			</h4>
+		</div>
+ 	</div>
+</div>
+<%end%>
+<%if @skills.present? %>
+<div class="modal-dialog modal-lg">
+	<div class="modal-content">
+    	<div class="modal-header">
+        	<h4 class="modal-title">
+          		<div class="modal-body">
+					<div id="s4" class="trix-content"><%= @skills.html_safe %></div>
+		  		</div>
+			</h4>
+		</div>
+ 	</div>
+</div>
+<%end%>
+</div>
+</div>
+</div>
+</div>

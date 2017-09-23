@@ -1,0 +1,64 @@
+<% flash.each do |name, msg| %>
+            <%= content_tag :div, msg, class: "alert alert-info" %>
+<% end %>
+<!--<div class="modal-dialog modal-lg" style="width: 90%;">
+	<div class="modal-content">
+    	<div class="modal-header">
+        	<h4 class="modal-title">
+          		<div class="modal-body">
+					<div class="trix-content"><%# @info.html_safe %></div>
+		  		</div>
+			</h4>
+		</div>
+ 	</div>
+</div>
+-->
+
+<section class="site-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+      	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+    	<div class="modal-header">
+        	<h4 class="modal-title">
+          		<div class="modal-body">
+
+        <div class="content-box box-img bg-light">
+          <div class="row no-gutter">
+            <div class="col-md-3">
+                <%= image_tag "me.jpg", class:'img-responsive profile_pic', size: '255x280' %>
+
+            </div> <!-- .col-md-3 -->
+
+            <div class="col-md-9">
+              <div class="box-body">
+                <div class="trix-content" align="center" style="font-size: 20px;">Devanshu Matlawala</div>
+                
+                <div class="trix-content" align="center" style="font-size: 16px;">1510 9th Street, Tuscaloosa, AL</div> 
+                
+
+                <hr>
+                <div class="trix-content" align="center" style="font-size: 16px;">Phone: 240-535-2051</div>
+                <div class="trix-content" align="center" style="font-size: 16px;">Email: <%= mail_to "devanshu@gwmail.gwu.edu" %></div>
+
+                <hr>
+
+                <% if @info.present? %>
+					<div class="trix-content"><%= @info.html_safe %></div>
+                <% end %>
+
+              </div> <!-- .box-body -->
+            </div> <!-- .col-md-9 -->
+          </div> <!-- .row -->
+        </div> <!-- .content-box -->
+        </div>
+			</h4>
+		</div>
+ 	</div>
+</div>
+
+      </div>
+    </div>
+  </div>
+</section>

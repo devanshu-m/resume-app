@@ -1,0 +1,29 @@
+<nav class="navbar navbar-default" role="navigation">
+  <!-- We use the fluid option here to avoid overriding the fixed width of a normal container within the narrow content columns. -->
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-6">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Devanshu Matlawala</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
+      <ul class="nav navbar-nav">
+        <li><%= link_to 'Home', root_path %></li>
+        <li><%= link_to 'Resume', resume_path %></li>
+        <li><%= link_to 'Sample Work', sample_work_path %></li>
+        <li><%= link_to 'Projects and Publications', projects_path %></li>
+        <li><%= link_to 'About me', about_me_path %></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <% if user_signed_in? %>
+          <li><%= link_to('Logout', destroy_user_session_path, method: :delete) %></li>
+        <% end %>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div>
+</nav>
