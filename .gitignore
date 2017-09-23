@@ -16,4 +16,4 @@
 !/log/.keep
 /tmp
 
-/assets/images
+app/assets/images
