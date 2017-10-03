@@ -12,7 +12,7 @@
     	<div class="modal-header">
         	<h4 class="modal-title">
           		<div class="modal-body">
-					<div class="trix-content"><%= @projects.html_safe %></div>
+					<div class="trix-content"><%= sanitize @projects %></div>
 		  		</div>
 			</h4>
 		</div>
@@ -25,7 +25,7 @@
     	<div class="modal-header">
         	<h4 class="modal-title">
           		<div class="modal-body">
-					<div class="trix-content"><%= @publications.html_safe %></div>
+					<div class="trix-content"><%= sanitize @publications %></div>
 		  		</div>
 			</h4>
 		</div>

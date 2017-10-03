@@ -45,7 +45,7 @@
                 <hr>
 
                 <% if @info.present? %>
-					<div class="trix-content"><%= @info.html_safe %></div>
+					<div class="trix-content"><%= sanitize @info %></div>
                 <% end %>
 
               </div> <!-- .box-body -->
