@@ -78,4 +78,8 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   config.action_mailer.default_url_options = { :host => 'https://www.devanshu-m.herokuapp.com' }
+  config.action_mailer.raise_delivery_errors = true
+  Rails.application.routes.default_url_options[:host] = 'https://www.devanshu-m.herokuapp.com'
+
+
 end
