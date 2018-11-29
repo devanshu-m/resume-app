@@ -1,0 +1,38 @@
+.contact-section {
+  padding: 5rem 0 0;
+  .card {
+    border: 0;
+    background: linear-gradient(to bottom, $black 0%,#{fade-out($black, .1)} 85%,#{fade-out($black, .2)} 100%);
+    border-bottom: 0.25rem solid $gray-600;
+    h4 {
+      font-size: 0.8rem;
+      font-family: 'Varela Round';
+      text-transform: uppercase;
+      letter-spacing: 0.15rem;
+      color: $white;
+    }
+    hr {
+      border-color: $white;
+      border-width: 0.25rem;
+      width: 3rem;
+    }
+  }
+  .social {
+    margin-top: 5rem;
+    a {
+      text-align: center;
+      height: 3rem;
+      width: 3rem;
+      background: linear-gradient(to bottom, $black 0%,#{fade-out($black, .1)} 85%,#{fade-out($black, .2)} 100%);
+      border-radius: 100%;
+      line-height: 3rem;
+      color: $white;
+      &:hover {
+        color: $white;
+      }
+      &:active {
+        color: $white;
+      }
+    }
+  }
+}

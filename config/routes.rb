@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   resources :portfolios
-  get '/resume', to: 'portfolios#resume'
-  get '/sample_work', to: 'portfolios#sample_work'
-  get '/projects', to: 'portfolios#projects'
-  get '/about_me', to: 'portfolios#about'
+  # get '/resume', to: 'portfolios#resume'
+  # get '/sample_work', to: 'portfolios#sample_work'
+  # get '/projects', to: 'portfolios#projects'
+  # get '/about_me', to: 'portfolios#about'
   devise_for :users, controllers: { registrations: "registrations"}
 
   root 'portfolios#index'

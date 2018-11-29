@@ -1,64 +1,152 @@
-<% flash.each do |name, msg| %>
-            <%= content_tag :div, msg, class: "alert alert-info" %>
-<% end %>
-<!--<div class="modal-dialog modal-lg" style="width: 90%;">
-	<div class="modal-content">
-    	<div class="modal-header">
-        	<h4 class="modal-title">
-          		<div class="modal-body">
-					<div class="trix-content"><%# @info.html_safe %></div>
-		  		</div>
-			</h4>
-		</div>
- 	</div>
-</div>
--->
+<!DOCTYPE html>
+<html lang="en">
 
-<section class="site-content">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12 col-md-12">
-      	<div class="modal-dialog modal-lg">
-		<div class="modal-content">
-    	<div class="modal-header">
-        	<h4 class="modal-title">
-          		<div class="modal-body">
+  <body id="page-top">
 
-        <div class="content-box box-img bg-light">
-          <div class="row no-gutter">
-            <div class="col-md-3">
-                <%= image_tag "me.jpg", class:'img-responsive', size: '255x280' %>
-
-            </div> <!-- .col-md-3 -->
-
-            <div class="col-md-9">
-              <div class="box-body">
-                <div class="trix-content" align="center" style="font-size: 20px;">Devanshu Matlawala</div>
-                
-                <div class="trix-content" align="center" style="font-size: 16px;">Atlanta, GA</div> 
-                
-
-                <hr>
-                <div class="trix-content" align="center" style="font-size: 16px;">Phone: 240-535-2051</div>
-                <div class="trix-content" align="center" style="font-size: 16px;">Email: <%= mail_to "devanshu_m@gwmail.gwu.edu" %></div>
-
-                <hr>
-
-                <% if @info.present? %>
-					<div class="trix-content"><%= sanitize @info %></div>
-                <% end %>
-
-              </div> <!-- .box-body -->
-            </div> <!-- .col-md-9 -->
-          </div> <!-- .row -->
-        </div> <!-- .content-box -->
+    <!-- Header -->
+    <header class="masthead">
+      <div class="container d-flex h-100 align-items-center">
+        <div class="mx-auto text-center">
+          <h1 class="mx-auto my-0 text-uppercase">Devanshu Matlawala</h1>
+          <h2 class="mx-auto mt-2 mb-5">Software Engineer</h2>
+          <div class="img">
+            <%= image_tag "me.png", class:'img-responsive' %>
+          </div>
+          <a href="#about" class="btn btn-primary js-scroll-trigger">About Me</a>
         </div>
-			</h4>
-		</div>
- 	</div>
-</div>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about-section text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2 class="text-white mb-4">What I do</h2>
+            <p class="text-white">
+              <% if @info.present? %>
+                <%= sanitize @info %>
+              <%end%>
+            </p>
+          </div>
+        </div>
+        <div class="text-center pb-4">
+          <a href="#projects" class="btn btn-primary js-scroll-trigger">Projects</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section bg-light">
+      <div class="container">
+
+        <h2 class="text-black text-center mb-4">What I have worked on</h2>
+        <!-- Featured Project Row -->
+        <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+          <!--<div class="col-xl-4 col-lg-5">-->
+            <div class="featured-text text-lg-left">
+              <p class="text-black-50 mb-0">
+                <% if @projects.present? %>
+                  <%= sanitize @projects %>
+                <%end%>
+              </p>
+            </div>
+          <!--</div>-->
+        </div>
+        <div class="text-center">
+          <a href="#education" class="btn btn-primary js-scroll-trigger">Education & Skills</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="education" class="education-section">
+      <div class="container">
+        <h2 class="text-black text-center mb-4">What I have learnt & What I know</h2>
+        <div class="row">
+          <div class="featured-text text-lg-left">
+            <p class="text-white-50">
+              <% if @education.present? %>
+                <%= sanitize @education %>
+              <%end%>
+              <% if @skills.present? %>
+                <%= sanitize @skills %>
+              <%end%>
+              <% if @core.present? %>
+                <%= sanitize @core %>
+              <%end%>
+            </p>
+          </div>
+        </div>
+        <div class="text-center pb-4">
+          <a href="#contact" class="btn btn-primary js-scroll-trigger">Contact</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section bg-light">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-md-4 mb-3 mb-md-0">
+            <div class="card py-4 h-100">
+              <div class="card-body text-center">
+                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                <h4 class="text-uppercase m-0">Address</h4>
+                <hr class="my-4">
+                <div class="small text-white">Atlanta, GA</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3 mb-md-0">
+            <div class="card py-4 h-100">
+              <div class="card-body text-center">
+                <%= fa_icon "envelope", style: "color: white;" %>
+                <h4 class="text-uppercase m-0">Email</h4>
+                <hr class="my-4">
+                <div class="small text-white">
+                  <%= mail_to "devanshu_m@gwmail.gwu.edu" %>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3 mb-md-0">
+            <div class="card py-4 h-100">
+              <div class="card-body text-center">
+                <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                <h4 class="text-uppercase m-0">Phone</h4>
+                <hr class="my-4">
+                <div class="small text-white">+1 (240) 535-2051</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="social d-flex justify-content-center">
+          <a href="https://twitter.com/devanshu19" class="mx-2" target="_blank">
+            <%= fa_icon "twitter" %>
+          </a>
+          <a href="https://www.facebook.com/devanshu.matlawala" class="mx-2" target="_blank">
+            <%= fa_icon "facebook" %>
+          </a>
+          <a href="https://github.com/devanshu-m" class="mx-2" target="_blank">
+            <%= fa_icon "github" %>
+          </a>
+          <a href="https://www.linkedin.com/in/devanshumatlawala/" class="mx-2" target="_blank">
+            <%= fa_icon "linkedin" %>
+          </a>
+        </div>
 
       </div>
-    </div>
-  </div>
-</section>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-light small text-center text-white-50">
+    </footer>
+  </body>
+
+</html>

@@ -10,13 +10,14 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
+//= require jquery3
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
 //= require trix
-//= require jquery
+//= require popper
 //= require bootstrap-sprockets
+//= require grayscale
+//= require jquery.easing
 
 addEventListener("click", function(event) {
   var el = event.target

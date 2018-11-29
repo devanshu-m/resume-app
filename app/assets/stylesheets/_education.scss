@@ -1,0 +1,23 @@
+.education-section {
+  padding-top: 2rem;
+  background: linear-gradient(to bottom, $black 0%,#{fade-out($black, .1)} 85%,#{fade-out($black, .2)} 100%);
+  color: $white;
+  .featured-text {
+    padding: 2rem;
+    @media (min-width: 992px) {
+      padding: 0 0 0 2rem;
+    }
+  }
+  .education-text {
+    padding: 3rem;
+    font-size: 90%;
+    @media (min-width: 992px) {
+      padding: 5rem;
+      hr {
+        border-color: $primary;
+        border-width: .25rem;
+        width: 30%;
+      }
+    }
+  }
+}

@@ -4,6 +4,11 @@ class PortfoliosController < ApplicationController
 
 	def index
 		@info = Portfolio.pluck(:summary).first
+    @projects = Portfolio.pluck(:projects).first
+    @publications = Portfolio.pluck(:selected_publications).first
+    @education = Portfolio.pluck(:education).first
+    @core = Portfolio.pluck(:core).first
+    @skills = Portfolio.pluck(:skills).first
 	end
 
 	def create
@@ -57,19 +62,19 @@ class PortfoliosController < ApplicationController
   	def resume
 #  		@info = Portfolio.select([:exp, :education, :core, :skills]).map {|e| {exp: e.exp, education: e.education, core: e.core, skills: e.skills} }
 		@exp = Portfolio.pluck(:exp).first
-		@education = Portfolio.pluck(:education).first
-		@core = Portfolio.pluck(:core).first
-		@skills = Portfolio.pluck(:skills).first
+		#@education = Portfolio.pluck(:education).first
+		# @core = Portfolio.pluck(:core).first
+		# @skills = Portfolio.pluck(:skills).first
   	end
 
   	def sample_work
   		@sample_work = Portfolio.pluck(:sample_work).first
   	end
 
-  	def projects
-  		@projects = Portfolio.pluck(:projects).first
-  		@publications = Portfolio.pluck(:selected_publications).first
-  	end
+  	# def projects
+  	# 	@projects = Portfolio.pluck(:projects).first
+  	# 	@publications = Portfolio.pluck(:selected_publications).first
+  	# end
 
   	def about
   		@about = Portfolio.pluck(:hobbies).first
